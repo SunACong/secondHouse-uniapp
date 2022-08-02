@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "进度查询",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#04F62D",
+  "usingComponents": {
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-steps": "/uni_modules/uview-ui/components/u-steps/u-steps",
+    "u-steps-item": "/uni_modules/uview-ui/components/u-steps-item/u-steps-item"
+  }
+}

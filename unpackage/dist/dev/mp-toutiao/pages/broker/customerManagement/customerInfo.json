@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "客户详情",
+  "navigationBarBackgroundColor": "#09ff15",
+  "usingComponents": {
+    "u-avatar": "/uni_modules/uview-ui/components/u-avatar/u-avatar",
+    "u-subsection": "/uni_modules/uview-ui/components/u-subsection/u-subsection",
+    "home-info": "/components/home-info/home-info"
+  }
+}

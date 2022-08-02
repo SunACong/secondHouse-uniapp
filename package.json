@@ -1,0 +1,9 @@
+{
+    "id": "animateList-zsptsf",
+    "name": "animateList",
+    "version": "1.0.0",
+    "description": "Vue实现简单列表无限循环滚动（鼠标悬停）",
+    "keywords": [
+        "vue,animate"
+    ]
+}

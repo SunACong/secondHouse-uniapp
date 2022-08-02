@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "客源管理",
+  "navigationBarBackgroundColor": "#09ff15",
+  "usingComponents": {
+    "u-line": "/uni_modules/uview-ui/components/u-line/u-line",
+    "u-gap": "/uni_modules/uview-ui/components/u-gap/u-gap",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-loading-page": "/uni_modules/uview-ui/components/u-loading-page/u-loading-page"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/broker/broker",
+    "pages/login/login",
+    "pages/administrator/administrator",
+    "pages/money/money",
+    "pages/my/my",
+    "pages/manager/manager",
+    "pages/user/user",
+    "pages/broker/homeUpload/homeUpload",
+    "pages/broker/customerUpload/customerUpload",
+    "pages/broker/homeManagement/homeManagement",
+    "pages/broker/customerManagement/customerManagement",
+    "pages/broker/customerManagement/customerInfo",
+    "pages/broker/homeManagement/homeInfo",
+    "pages/broker/jiaojiedan/jiaojiedan",
+    "pages/broker/jiaojiedan/index",
+    "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+    "pages/broker/jiaojiedan/schedule",
+    "pages/broker/jiaojiedan/reason"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#f1f1f1",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#C8C9CC",
+    "selectedColor": "#000",
+    "backgroundColor": "#ffffff",
+    "height": "65px",
+    "font-size": "15rpx",
+    "iconWidth": "40px",
+    "midButton": {
+      "height": "90px",
+      "text": "总经办",
+      "iconPath": "static/common/zongjingban.png",
+      "iconWidth": "60px"
+    },
+    "list": [
+      {
+        "pagePath": "pages/broker/broker",
+        "iconPath": "static/common/jingjiren.png",
+        "selectedIconPath": "static/common/jingjiren.png",
+        "text": "经纪人"
+      },
+      {
+        "pagePath": "pages/administrator/administrator",
+        "iconPath": "static/common/xingzheng.png",
+        "selectedIconPath": "static/common/xingzheng.png",
+        "text": "行政"
+      },
+      {
+        "pagePath": "pages/money/money",
+        "iconPath": "static/common/caiwu.png",
+        "selectedIconPath": "static/common/caiwu.png",
+        "text": "财务"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/common/gerenzhongxin.png",
+        "selectedIconPath": "static/common/gerenzhongxin.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+}

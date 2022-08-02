@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "查询原因",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#04F62D",
+  "usingComponents": {
+    "u-gap": "/uni_modules/uview-ui/components/u-gap/u-gap",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
+  }
+}

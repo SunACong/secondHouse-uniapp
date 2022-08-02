@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "交接单",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#04F62D",
+  "usingComponents": {
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u-gap": "/uni_modules/uview-ui/components/u-gap/u-gap",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup"
+  }
+}

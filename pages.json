@@ -1,0 +1,177 @@
+{
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/broker/broker",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/administrator/administrator",
+			"style": {
+				"navigationBarTitleText": "行政"
+			}
+		}, {
+			"path": "pages/money/money",
+			"style": {
+				"navigationBarTitleText": "财务"
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/manager/manager",
+			"style": {
+				"navigationBarTitleText": "总经办"
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/broker/homeUpload/homeUpload",
+			"style": {
+				"navigationBarTitleText": "房源上传",
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#ffffff"
+			}
+		}, {
+			"path": "pages/broker/customerUpload/customerUpload",
+			"style": {
+				"navigationBarTitleText": "客源上传",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/broker/homeManagement/homeManagement",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/broker/customerManagement/customerManagement",
+			"style": {
+				"navigationBarTitleText": "客源管理",
+				"navigationBarBackgroundColor": "#09ff15"
+			}
+
+		}, {
+			"path": "pages/broker/customerManagement/customerInfo",
+			"style": {
+				// "navigationStyle": "custom",
+				"navigationBarTitleText": "客户详情",
+				"navigationBarBackgroundColor": "#09ff15"
+			}
+		}, {
+			"path": "pages/broker/homeManagement/homeInfo",
+			"style": {
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/broker/jiaojiedan/jiaojiedan",
+			"style": {
+				"navigationBarTitleText": "交接单",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"backgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/broker/jiaojiedan/index",
+			"style": {
+				"navigationBarTitleText": "交接单",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#04F62D"
+			}
+
+		}, {
+			"path": "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+			"style": {
+				"disableScroll": true,
+				"app-plus": {
+					"backgroundColorTop": "transparent",
+					"background": "transparent",
+					"titleNView": false,
+					"scrollIndicator": false,
+					"popGesture": "none",
+					"animationType": "fade-in",
+					"animationDuration": 200
+				}
+			}
+		}, {
+			"path": "pages/broker/jiaojiedan/schedule",
+			"style": {
+				"navigationBarTitleText": "进度查询",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#04F62D"
+			}
+
+		}, {
+			"path": "pages/broker/jiaojiedan/reason",
+			"style": {
+				"navigationBarTitleText": "查询原因",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#04F62D"
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#f1f1f1",
+		"backgroundColor": "#F8F8F8",
+		"onReachBottomDistance": 300
+	},
+	"tabBar": {
+		"color": "#C8C9CC",
+		"selectedColor": "#000",
+		"backgroundColor": "#ffffff",
+		"height": "65px",
+		"font-size": "15rpx",
+		"iconWidth": "40px",
+		"midButton": {
+			"height": "90px",
+			"text": "总经办",
+			"iconPath": "static/common/zongjingban.png",
+			"iconWidth": "60px"
+		},
+		"list": [ {
+			"pagePath": "pages/broker/broker",
+			"iconPath": "static/common/jingjiren.png",
+			"selectedIconPath": "static/common/jingjiren.png",
+			"text": "经纪人"
+		}, {
+			"pagePath": "pages/administrator/administrator",
+			"iconPath": "static/common/xingzheng.png",
+			"selectedIconPath": "static/common/xingzheng.png",
+			"text": "行政"
+		}, {
+			"pagePath": "pages/money/money",
+			"iconPath": "static/common/caiwu.png",
+			"selectedIconPath": "static/common/caiwu.png",
+			"text": "财务"
+		}, {
+			"pagePath": "pages/user/user",
+			"iconPath": "static/common/gerenzhongxin.png",
+			"selectedIconPath": "static/common/gerenzhongxin.png",
+			"text": "个人中心"
+		} ]
+	}
+}
