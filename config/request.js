@@ -1,13 +1,13 @@
 module.exports = (vm) => {
     uni.$u.http.setConfig((config) => {
-			// config.baseURL = 'http://localhost:8080'; /* 自己 */
-			// config.baseURL = 'http://46a268854t.qicp.vip'; /* 自己 */
-      // config.baseURL = 'http://520o1938c9.qicp.vip'; /* 张高义 */
-      // config.baseURL = 'http://520596g41f.wicp.vip'; /* 朱家华 */
-      config.baseURL = 'http://47.111.85.236:8080'; /* 服务器 */
-      // config.baseURL = 'http://47.111.85.236:9527/prod-api'; /* 服务器 */
-			config.custom = {auth: true,catch: true}; 
-			// config.timeout= 6000;
+		config.baseURL = 'http://localhost:8080'; /* 自己 */
+		// config.baseURL = 'http://46a268854t.qicp.vip'; /* 自己 */
+		// config.baseURL = 'http://520o1938c9.qicp.vip'; /* 张高义 */
+		// config.baseURL = 'http://520596g41f.wicp.vip'; /* 朱家华 */
+		// config.baseURL = 'http://47.111.85.236:8080'; /* 服务器 */
+		// config.baseURL = 'http://47.111.85.236:9527/prod-api'; /* 服务器 */
+		config.custom = {auth: true,catch: true}; 
+		// config.timeout= 6000;
       return config
     })
 	

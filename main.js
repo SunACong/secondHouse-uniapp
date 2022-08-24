@@ -10,11 +10,11 @@ import uView from '@/uni_modules/uview-ui'
 Vue.use(uView)
 
 import cuCustom from 'colorui/components/cu-custom.vue'
-Vue.component('cu-custom',cuCustom)
+Vue.component('cu-custom', cuCustom)
 
 
-let vuexStore = require("@/store/$u.mixin.js");
-Vue.mixin(vuexStore);
+let vuexStore = require('@/store/$u.mixin.js')
+Vue.mixin(vuexStore)
 
 const app = new Vue({
 	store,
@@ -32,16 +32,17 @@ Vue.use(httpApi, app)
 import utils from '@/config/utils.js'
 Vue.use(utils, app)
 
+import globalVariable from '@/config/globle_variable.js'
+Vue.prototype.GLOBLE = globalVariable
+
 app.$mount()
 
 // #endif 
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
-export function createApp() {
+export function createApp () {
   const app = createSSRApp(App)
-  return {
-    app
-  }
+  return { app }
 }
 // #endif

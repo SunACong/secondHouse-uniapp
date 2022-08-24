@@ -86,7 +86,7 @@
 		
 		<view class="flex bg-white align-center" style="position: fixed;bottom: 0;width: 100%;height: 110rpx;">
 			<view class=" flex-sub">
-				<u-icon :label="this.isWho?'联系房东' : '联系经纪人'" @click="callSomebody()" labelPos="bottom" name="/static/broker/homeManagement/aixin.png" width="52rpx" height="44rpx"></u-icon>
+				<u-icon :label="this.isWho?'联系房东' : '联系经纪人'" @click="callSomebody()" labelPos="bottom" :name="this.GLOBLE.imgURL+'/broker/homeManagement/aixin.png'" width="52rpx" height="44rpx"></u-icon>
 			</view>
 			<view class="padding-lr flex-sub">
 				<u-button class="m-text-20" style="color: #fff;height: 67rpx;background-color: #ff2a39;border-radius: 30rpx;" @click="toJiaoJieDan()">交接单</u-button>
@@ -124,13 +124,11 @@
 			 * 接收上个页面传递的信息
 			 */
 			this.homeInfo = option
-			try{
+			if (this.homeInfo.picOne.indexOf(',') !== -1) { // 
 				this.homeInfo.picOne = option.picOne.split(',')
-				this.homeInfo.picOne.pop() // 弹出最后一个逗号
-			}catch(e) {
-				// TODO handle the exception
-				console.log('异常信息: ', e)
-				this.homeInfo.picOne = ['/static/logo.png']  
+				this.homeInfo.picOne.pop()
+			} else {
+				this.homeInfo.picOne = option.picOne.split(',')
 			}
 			console.log('传递的房屋信息: ', this.homeInfo )
 			/**
@@ -271,7 +269,6 @@
 				uni.$u.api.customer.customerMatch({ params: customerMatch }).then(res => {
 					this.list2 = res.rows
 					if (res.rows.length === 0) this.$u.toast('未匹配到数据')
-					console.log('匹配结果：', res)  
 				}).catch(err => {
 					this.$u.toast(err)
 				})

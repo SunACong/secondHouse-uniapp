@@ -12,7 +12,7 @@
 			<view class="flex">
 				<u-upload :style="fileList.length!=0? 'margin-left: 70rpx;':'margin-left: 250rpx;'" :fileList="fileList"
 					@afterRead="afterRead" @delete="deletePic" multiple :maxCount="9">
-					<image src="../../../static/broker/homeUpload/upload.png" mode="widthFix"
+					<image :src="this.GLOBLE.imgURL+'/broker/homeUpload/upload.png'" mode="widthFix"
 						style="width: 170rpx;height: 170rpx;"></image>
 				</u-upload>
 			</view>

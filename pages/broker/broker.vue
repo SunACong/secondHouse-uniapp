@@ -1,9 +1,9 @@
  <template>
 	<view class="" style="background-color: #FFFFFF;">
-		<u-icon width="750rpx" height="84rpx" style="padding-top: 81rpx;" name="/static/broker/renwudating.png">
+		<u-icon width="750rpx" height="84rpx" style="padding-top: 81rpx;" :name="this.GLOBLE.imgURL+'/broker/renwudating.png'">
 		</u-icon>
 		<view class="m-relative">
-			<u-icon class="m-absolute::after " width="750rpx" height="450rpx" name="/static/broker/kehugongpan.png">
+			<u-icon class="m-absolute::after " width="750rpx" height="450rpx" :name="this.GLOBLE.imgURL+'/broker/kehugongpan.png'">
 			</u-icon>
 			<view class="m-absolute" style="left: 165rpx;top: 146rpx;">
 				<animateList :List="customerList" @clickList="toWatchCustomer"></animateList>
@@ -11,42 +11,42 @@
 		</view>
 
 
-		<u-icon width="600rpx" height="220rpx" style="margin-left: 80rpx;" name="/static/broker/vs.png"></u-icon>
+		<u-icon width="600rpx" height="220rpx" style="margin-left: 80rpx;" :name="this.GLOBLE.imgURL+'/broker/vs.png'"></u-icon>
 
 		<view class="m-relative">
 			<u-icon class="m-absolute::after " width="750rpx" height="470rpx" style="margin-top: -63rpx;"
-				name="/static/broker/fangyuan.png"></u-icon>
+				:name="this.GLOBLE.imgURL+'/broker/fangyuan.png'"></u-icon>
 			<view class="m-absolute" style="left: 140rpx;top: 146rpx;">
 				<animateList4 :List="homeList" @clickListTwo="toWatchHome"></animateList4>
 			</view>
 		</view> 
-		<u-icon width="750rpx" height="80rpx" name="/static/broker/gongzuoqu.png"></u-icon>
+		<u-icon width="750rpx" height="80rpx" :name="this.GLOBLE.imgURL+'/broker/gongzuoqu.png'"></u-icon>
 
 		<view class="chengguo m-relative">
 			<u-icon class="m-absolute" width="690rpx" height="372rpx" style="top: 39rpx;left: 40rpx;"
-				name="/static/broker/wodechengguo.png"></u-icon>
+				:name="this.GLOBLE.imgURL+'/broker/wodechengguo.png'"></u-icon>
 			<u-icon class="m-absolute" width="288rpx" height="288rpx" style="top: 102rpx;left: 227rpx;"
-				name="/static/broker/VS2.png"></u-icon>
+				:name="this.GLOBLE.imgURL+'/broker/VS2.png'"></u-icon>
 			<text class="m-absolute m-text-40"
 				style="top: 58rpx;left: 306rpx;color: #34f308;font-weight: 700;">我的成果</text>
 			<view class="m-absolute flex flex-direction  align-center chengGuo1" style="width: 200rpx;">
-				<u-icon width="105rpx" height="105rpx" name="/static/broker/fangyuanshuju.png"></u-icon>
+				<u-icon width="105rpx" height="105rpx" :name="this.GLOBLE.imgURL+'/broker/fangyuanshuju.png'"></u-icon>
 				<text>{{result_home}}套房源</text>
 			</view>
 			<view class="m-absolute flex flex-direction  align-center chengGuo2" style="width: 200rpx;">
-				<u-icon width="105rpx" height="105rpx" name="/static/broker/tichengshuju.png"></u-icon>
+				<u-icon width="105rpx" height="105rpx" :name="this.GLOBLE.imgURL+'/broker/tichengshuju.png'"></u-icon>
 				<text>1830.03元整</text>
 			</view>
 			<view class="m-absolute flex flex-direction  align-center chengGuo3" style="width: 200rpx;">
-				<u-icon width="105rpx" height="105rpx" name="/static/broker/kehushuju.png"></u-icon>
+				<u-icon width="105rpx" height="105rpx" :name="this.GLOBLE.imgURL+'/broker/kehushuju.png'"></u-icon>
 				<text>{{result_customer}}位客户</text>
 			</view>
 			<view class="m-absolute flex flex-direction  align-center chengGuo4" style="width: 200rpx;">
-				<u-icon width="105rpx" height="105rpx" name="/static/broker/jiangjinshuju.png"></u-icon>
+				<u-icon width="105rpx" height="105rpx" :name="this.GLOBLE.imgURL+'/broker/jiangjinshuju.png'"></u-icon>
 				<text>1888元</text>
 			</view>
 		</view>
-		<u-icon width="670rpx" height="180rpx" style="margin-left: 40rpx;margin-top: 20rpx;" name="/static/broker/OA.png"></u-icon>
+		<u-icon width="670rpx" height="180rpx" style="margin-left: 40rpx;margin-top: 20rpx;" :name="this.GLOBLE.imgURL+'/broker/OA.png'"></u-icon>
 		<!-- 通知    公告 -->
 		<view class="u-demo-block margin-left margin-right ">
 			<view class="u-demo-block__content">
@@ -107,69 +107,69 @@
 		data () {
 			return {
 				oneList: [{
-						icon: '/static/broker/fangyuanshangchuan.png',
+						icon: this.GLOBLE.imgURL+'/broker/fangyuanshangchuan.png',
 						title: '房源上传',
 						smallTitle: '房屋上传、界定',
 						url: '/pages/broker/homeUpload/homeUpload',
 					},
 					{
-						icon: '/static/broker/keyuanshangchuan.png',
+						icon: this.GLOBLE.imgURL+'/broker/keyuanshangchuan.png',
 						title: '客源上传',
 						smallTitle: '客源上传、公盘',
 						url: '/pages/broker/customerUpload/customerUpload',
 					},
 					{
-						icon: '/static/broker/fangyuanguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/fangyuanguanli.png',
 						title: '房源管理',
 						smallTitle: '房源推广、管理',
 						url: '/pages/broker/homeManagement/homeManagement',
 					},
 					{
-						icon: '/static/broker/keyuanguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/keyuanguanli.png',
 						title: '客源管理',
 						smallTitle: '客源管理、管理',
 						url: '/pages/broker/customerManagement/customerManagement',
 					}
 				],
 				twoList: [{
-						icon: '/static/broker/jiaojiedan.png',
+						icon: this.GLOBLE.imgURL+'/broker/jiaojiedan.png',
 						title: '交接单',
 						smallTitle: '交接单管理',
 						url: '/pages/broker/jiaojiedan/index', 
 					},
 					{
-						icon: '/static/broker/banlijindu.png',
+						icon: this.GLOBLE.imgURL+'/broker/banlijindu.png',
 						title: '办理进度',
 						smallTitle: '办理进度查询'
 					},
 					{
-						icon: '/static/broker/zhengxinguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/zhengxinguanli.png',
 						title: '征信管理',
 						smallTitle: '征信上传管理'
 					},
 					{
-						icon: '/static/broker/feiyongshenpi.png',
+						icon: this.GLOBLE.imgURL+'/broker/feiyongshenpi.png',
 						title: '费用审批',
 						smallTitle: '一键处理审批流程'
 					}
 				],
 				threeList: [{
-						icon: '/static/broker/hetongguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/hetongguanli.png',
 						title: '合同管理',
 						smallTitle: '合同下载、填写'
 					}, 
 					{
-						icon: '/static/broker/jianzhiguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/jianzhiguanli.png',
 						title: '兼职管理',
 						smallTitle: '兼职人员客房员管理'
 					},
 					{
-						icon: '/static/broker/tichengguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/tichengguanli.png',
 						title: '提成管理',
 						smallTitle: '我的收入、提成'
 					},
 					{
-						icon: '/static/broker/gonggaoguanli.png',
+						icon: this.GLOBLE.imgURL+'/broker/gonggaoguanli.png',
 						title: '公告管理',
 						smallTitle: '最新公司情况、政策管理'
 					}
@@ -199,7 +199,7 @@
 		},
 		onPullDownRefresh () {
 			this.getList()
-			uni.stopPullDownRefresh()4
+			uni.stopPullDownRefresh()
 		},
 		
 		methods: {

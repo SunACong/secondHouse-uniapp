@@ -31,7 +31,7 @@
 			</view>
 			<view class="flex">
 				<smh-select class="margin-left-xl" :list="list" @change="show"></smh-select>
-				<u-icon width="50rpx" height="30rpx" name="/static/broker/homeManagement/liuliang.png" @click="clear()">
+				<u-icon width="50rpx" height="30rpx" :name="this.GLOBLE.imgURL+'/broker/homeManagement/liuliang.png'" @click="clear()">
 				</u-icon>
 			</view>
 		</view>

@@ -2,11 +2,11 @@
 	<view style="
 			width: 750rpx;
 			height: 1610rpx;
-			background-image: url(/static/loginBGI.png);
+			background-image: url(http://47.111.85.236:8099/loginBGI.png);
 			opacity: 1.2;
 			background-repeat:no-repeat;
 			background-size: cover;" >
-		<image class="headImg" src="/static/logo.png" :lazy-load="true"></image>
+		<image class="headImg" :src="this.GLOBLE.imgURL+'/logo.png'" :lazy-load="true"></image>
 		
 		<view class="formArea"> 
 			<u--form labelPosition="left" :model="userInfo" ref="form1" :rules="rules" :labelStyle="labelStyle" >

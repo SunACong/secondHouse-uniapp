@@ -169,8 +169,7 @@
 			"text": "财务"
 		}, {
 			"pagePath": "pages/user/user",
-			"iconPath": "static/common/gerenzhongxin.png",
-			"selectedIconPath": "static/common/gerenzhongxin.png",
+			"iconPath": "http://47.111.85.236:8099/common/gerenzhongxin.png",
 			"text": "个人中心"
 		} ]
 	}

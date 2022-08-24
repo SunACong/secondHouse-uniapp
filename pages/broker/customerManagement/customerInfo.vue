@@ -32,6 +32,8 @@
 			</view>
 		</view>
 		
+		<view style="height: 140rpx;"></view>
+		
 		<view class="flex m-text-40 text-center align-center text-red" style="background-color: #02f9d8;height: 100rpx;width: 100%;position: fixed;bottom: 0;">
 			<view class="flex-sub u-border-right" style="border-right: #fff 10rpx solid;" @click="callCustomer(customerInfo.uploaderPhone, 2)">
 				经纪人
@@ -72,7 +74,6 @@
 			/**
 			 * 获取上个页面传来的参数
 			 */
-			console.log(option)
 			this.customerInfo = option
 			console.log('客户信息: ', this.customerInfo)
 			this.addCallLogForm.name = option.agent
