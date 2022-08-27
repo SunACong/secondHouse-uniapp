@@ -1,13 +1,13 @@
 module.exports = (vm) => {
     uni.$u.http.setConfig((config) => {
-		config.baseURL = 'http://localhost:8080'; /* 自己 */
+		// config.baseURL = 'http://localhost:8080'; /* 自己 */
 		// config.baseURL = 'http://46a268854t.qicp.vip'; /* 自己 */
 		// config.baseURL = 'http://520o1938c9.qicp.vip'; /* 张高义 */
 		// config.baseURL = 'http://520596g41f.wicp.vip'; /* 朱家华 */
-		// config.baseURL = 'http://47.111.85.236:8080'; /* 服务器 */
+		config.baseURL = 'http://47.111.85.236:8080'; /* 服务器 */
 		// config.baseURL = 'http://47.111.85.236:9527/prod-api'; /* 服务器 */
 		config.custom = {auth: true,catch: true}; 
-		// config.timeout= 6000;
+		config.timeout= 6000;
       return config
     })
 	
@@ -38,11 +38,7 @@ module.exports = (vm) => {
 		let {config , data} = response;
 		console.log("config: ",config);
 		console.log("data: ",data);
-		if (data.code !== 200) { 
-			// 如果没有显式定义custom的toast参数为false的话，默认对报错进行toast弹出提示
-			// if (custom.toast !== false) {
-			// 	uni.$u.toast(data.msg)
-			// }
+		if (data.code !== 200) {
 			if (data.code == 401) {
 				uni.$u.toast("未登录或者登录已过期")
 				uni.$u.route({
@@ -54,9 +50,6 @@ module.exports = (vm) => {
 			}
 			// 如果需要catch返回，则进行reject
 			if (custom?.catch) {
-				// if(response.config?.url == '/login'){
-				// 	return '登陆失败'
-				// }
 				return Promise.reject(new Error(data.msg || "捕捉错误"))
 			} else {
 				// 否则返回一个pending中的promise，请求不会进入catch中

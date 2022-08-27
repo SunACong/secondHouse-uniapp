@@ -6,8 +6,11 @@
 			opacity: 1.2;
 			background-repeat:no-repeat;
 			background-size: cover;" >
+			
+		<!-- app图标 -->	
 		<image class="headImg" :src="this.GLOBLE.imgURL+'/logo.png'" :lazy-load="true"></image>
 		
+		<!-- 表单域 -->
 		<view class="formArea"> 
 			<u--form labelPosition="left" :model="userInfo" ref="form1" :rules="rules" :labelStyle="labelStyle" >
 				<u-form-item class="formItem" style="height: 180rpx;" label="用户名" labelWidth="172rpx" prop="username"  borderBottom>
@@ -16,37 +19,41 @@
 				<u-form-item class="formItem" style="color: white" label="密码" labelWidth="172rpx" prop="password" borderBottom>
 					<u--input v-model="userInfo.password" color="#999999" fontSize="36rpx" type="password" border="none" placeholder="请输入密码" placeholderStyle="color:'#999999'"></u--input>
 				</u-form-item>
-<!-- 				<u-form-item class="formItem" style="height: 100rpx;color: white" label="门店码" labelWidth="172rpx" prop="" borderBottom>
+				<!-- <u-form-item class="formItem" style="height: 100rpx;color: white" label="门店码" labelWidth="172rpx" prop="" borderBottom>
 					<u--input color="#999999" fontSize="36rpx" type="password" border="none" placeholder="请输入门店码" placeholderStyle="color:'#999999'"></u--input>
 				</u-form-item> -->
 			</u--form>
 			<view class="flex">
 				<view class="margin-top-xs" style="width: 30%;margin-left: 80rpx;">
-						<u-checkbox-group @change="checkboxChange">
-								<u-checkbox	label="记住密码"	name="记住密码" labelColor="white" :checked="true"></u-checkbox>
-						</u-checkbox-group>
+					<!-- <u-checkbox-group @change="checkboxChange"> -->
+					<u-checkbox-group :@change="!this.remember">
+							<u-checkbox	label="记住密码"	name="记住密码" labelColor="white" :checked="true"></u-checkbox>
+					</u-checkbox-group>
 				</view>
 				<view class="text-right margin-right-xl margin-top-xs u-primary" style="width: 70%;">
 					忘记密码?
 				</view>
 			</view>
-			
-
 		</view> 
 		
+		<!-- 登录按钮 -->
 		<view class="login m-text-38 align-center">
 			<u-button shape="circle" @click="toLogin" :loading="loading"  loadingMode="circle" loadingText="正在登录...">登录</u-button>
 		</view>
 		
+		<!-- 底部 -->
 		<view class="text-center margin-top m-text-26 text-white">
 			没有账号？
 			<text class="u-primary">立即注册</text>
 		</view>
+		
 	</view>
 </template>
 
 <script>
+	// 检查更新
 	import checkUpdate from '@/uni_modules/uni-upgrade-center-app/utils/check-update'
+	
 	export default {
 		data () {
 			return {
@@ -75,19 +82,21 @@
 				}
 			}
 		},
+		
 		onLoad () {
 			checkUpdate()
 			this.userInfo.username = this.vuex_username
 			this.userInfo.password = this.vuex_password
 		},
+		
 		methods: {
-			checkboxChange (e) {
-				this.remember = !this.remember
-				console.log(this.remember)
-			},
+			/**
+			 * 登录逻辑
+			 */
 			async toLogin () {
 				this.loading = true
 				try{
+					// 登录请求
 					let { code, token } = await this.$u.api.login(this.userInfo)
 					if(code === 200) {
 						this.$u.vuex('vuex_token', token)
@@ -99,13 +108,16 @@
 							this.$u.vuex('vuex_password', '')
 						}
 					} 
+					// 登陆成功获取用户信息
 					let { user } = await this.$u.api.getInfo()
 					this.$u.vuex('vuex_userInfo', user)
+					
 					uni.$u.route( {
 						type: 'switchTab',
 						url: '/pages/broker/broker'
 					}) 
 				}catch(e) {
+					console.log(e)
 					uni.$u.toast('请检查用户名和密码')
 				}
 				this.loading = false

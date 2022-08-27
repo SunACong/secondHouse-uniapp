@@ -1,25 +1,24 @@
 <script>
 	import checkUpdate from '@/uni_modules/uni-upgrade-center-app/utils/check-update'
 	export default {
-		onLaunch: function() {
+		onLaunch: function () {
 			console.log('App Launch')
 			console.log('开始检查更新。。。')
 			checkUpdate()
 			console.log('检查完毕')
 		},
-		onShow: function() {
+		onShow: function () {
 			console.log('App Show')
 		},
-		onHide: function() {
+		onHide: function () {
 			console.log('App Hide')
 		}
 	}
 </script> 
 
 <style lang="scss">
+	@import "./common/iconfont.css";
 	@import "@/uni_modules/uview-ui/index.scss";
-	@import "@/static/iconfont.css";
-	@import url(@/common/iconfont.css);
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
 

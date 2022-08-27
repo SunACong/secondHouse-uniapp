@@ -2,7 +2,7 @@
 	<view>
 		<view class="bg-white flex padding-xl shadow" style="width: 96%;height: 250rpx;margin: 100rpx auto 0 auto;border-radius: 30rpx;">
 			<view class="bg-gray text-center" style="width: 160rpx;height: 160rpx;border-radius: 50%;line-height: 160rpx;">
-				<uni-icons custom-prefix="iconfont" type="icon-person" size="60" color="#07D5F4"></uni-icons>
+				<uni-icons custom-prefix="my-icon" type="my-icon-persongreen" size="60" color="#07D5F4"></uni-icons>
 			</view>
 			<view class="margin-left-xl">
 				<u--text :text="'昵称：'+ vuex_userInfo.nickName"></u--text>
@@ -13,12 +13,12 @@
 		
 		<view class="bg-white flex shadow justify-between" style="background-color: #0BF6D7;width: 96%;height: 200rpx;margin: 20rpx auto 0 auto;border-radius: 30rpx;">
 			<view class="flex-sub text-center margin-top-xl">
-				<uni-icons custom-prefix="iconfont" type="icon-yinhangka" size="30" color="#fff"></uni-icons>
+				<uni-icons custom-prefix="my-icon" type="my-icon-yinhangka" size="30" color="#fff"></uni-icons>
 				<view class="text-white">我的银行卡</view>
 			</view>
 			<u-line color="#fff" direction="col" length="50%" :hairline="false" margin="50rpx"></u-line>
 			<view class="flex-sub text-center margin-top-xl">
-				<uni-icons custom-prefix="iconfont" type="icon-qianbao" size="30" color="#fff"></uni-icons>
+				<uni-icons custom-prefix="my-icon" type="my-icon-qianbao" size="30" color="#fff"></uni-icons>
 				<view class="text-white">我的钱包</view>
 			</view>
 		</view>
@@ -31,7 +31,7 @@
 					rightIcon="play-right-fill"
 				>
 					<view slot="title">
-						<uni-icons custom-prefix="iconfont" type="icon-duoren" size="30"></uni-icons>
+						<uni-icons custom-prefix="my-icon" type="my-icon-duoren" size="30"></uni-icons>
 						<text style="vertical-align: 25%;margin-left: 30rpx;">我的提成</text>
 					</view>
 				</u-cell>
@@ -46,7 +46,7 @@
 					:rightIcon="item.rightIcon"
 				>
 					<view slot="title">
-						<uni-icons custom-prefix="iconfont" :type="item.type" size="30"></uni-icons>
+						<uni-icons custom-prefix="my-icon" :type="item.type" size="30"></uni-icons>
 						<text style="vertical-align: 25%;margin-left: 30rpx;">{{item.title}}</text>
 					</view>
 				</u-cell>
@@ -72,22 +72,22 @@
 				cellList: [
 					{
 						url: 'url',
-						type: 'icon-meiyuan',
+						type: 'my-icon-meiyuan',
 						title: '我的提成',
 						rightIcon: 'play-right-fill'
 					}, {
 						url: 'url',
-						type: 'icon-liwu',
+						type: 'my-icon-liwu',
 						title: '我要推荐',
 						rightIcon: 'play-right-fill'
 					}, {
 						url: 'url',
-						type: 'icon-person',
+						type: 'my-icon-person',
 						title: '通讯录',
 						rightIcon: 'play-right-fill'
 					}, {
 						url: 'url',
-						type: 'icon-huizhang',
+						type: 'my-icon-huizhang',
 						title: '我的企业',
 						rightIcon: 'play-right-fill'
 					}
