@@ -26,7 +26,7 @@
 			<view class="flex">
 				<view class="margin-top-xs" style="width: 30%;margin-left: 80rpx;">
 					<!-- <u-checkbox-group @change="checkboxChange"> -->
-					<u-checkbox-group :@change="!this.remember">
+					<u-checkbox-group @change="isRemember()">
 							<u-checkbox	label="记住密码"	name="记住密码" labelColor="white" :checked="true"></u-checkbox>
 					</u-checkbox-group>
 				</view>
@@ -37,12 +37,12 @@
 		</view> 
 		
 		<!-- 登录按钮 -->
-		<view class="login m-text-38 align-center">
-			<u-button shape="circle" @click="toLogin" :loading="loading"  loadingMode="circle" loadingText="正在登录...">登录</u-button>
+		<view class="login m-text-36">
+			<u-button style="height: 70rpx;" size="large" shape="circle" @click="toLogin" :loading="loading"  loadingMode="circle" loadingText="正在登录...">登录</u-button>
 		</view>
 		
 		<!-- 底部 -->
-		<view class="text-center margin-top m-text-26 text-white">
+		<view class="text-center  m-text-26 text-white">
 			没有账号？
 			<text class="u-primary">立即注册</text>
 		</view>
@@ -91,6 +91,13 @@
 		
 		methods: {
 			/**
+			 * 
+			 */
+			isRemember () {
+				this.remember = !this.remember
+			},
+			
+			/**
 			 * 登录逻辑
 			 */
 			async toLogin () {
@@ -100,6 +107,9 @@
 					let { code, token } = await this.$u.api.login(this.userInfo)
 					if(code === 200) {
 						this.$u.vuex('vuex_token', token)
+						
+						console.log('this.remember: ', this.remember)
+						
 						if(this.remember) {
 							this.$u.vuex('vuex_username', this.userInfo.username)
 							this.$u.vuex('vuex_password', this.userInfo.password)
@@ -146,12 +156,8 @@
 }
 
 .login{
-	width: 80%;
-	margin-top: 200rpx;
-	margin-left: 80rpx;
+	width: 60%;
+	margin: 200rpx auto;
 	border-radius: 30rpx;
-}
-.margin-top{
-	margin-top: 130rpx;
 }
 </style>

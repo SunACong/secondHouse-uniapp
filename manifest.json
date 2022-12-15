@@ -4,7 +4,7 @@
     "description" : "蜜蜂安家",
     "versionName" : "1.1.3",
     "versionCode" : 112,
-    "transformPx" : false,
+    "transformPx" : true,
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,

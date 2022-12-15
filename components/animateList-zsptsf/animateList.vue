@@ -25,14 +25,14 @@
             },
         },
         data () {
-            return {
-							oneClass: false,
-									animate: false,
-							}
+			return {
+				oneClass: false,
+				animate: false,
+			}
         },
         mounted () {
             this.timer= setInterval(this.scroll, 1500)
-        }, 
+        },  
         methods: {
 					scroll () {
 							let that = this
@@ -66,8 +66,8 @@
 
 <style scoped>
     #box{
-        height: 120px;
-        line-height: 30px;
+        height: 240rpx;
+        line-height: 60rpx;
         overflow: hidden;
         transition: all 0.5s;
         color: #ffffff;
@@ -77,8 +77,8 @@
     }
     #con1 li{
         list-style: none;
-        line-height: 30px;
-        height: 60px;
+        line-height: 60rpx;
+        height: 120rpx;
     }
 	.mg{
 		display: inline-block;
@@ -94,9 +94,9 @@
 		margin-right: 110rpx;
 	}
 	.m-margin-0{
-		margin-top: 0px;
+		margin-top: 0rpx;
 	}
 	.m-margin-30{
-		margin-top: -30px;
+		margin-top: -60rpx;
 	}
 </style>

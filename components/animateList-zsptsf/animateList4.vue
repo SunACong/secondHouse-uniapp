@@ -17,54 +17,54 @@
 
 <script>
     export default {
-        name: "animateList4",
-        props:{
+        name: 'animateList4',
+        props: {
             List: {
                 type: Array,
                  default: ()=>[]
             },
         },
-        data() {
+        data () {
             return {
 				oneClass: false,
                 animate: false,
             }
         },
-        mounted() {
-            this.timer= setInterval(this.scroll,1500)
+        mounted () {
+            this.timer= setInterval(this.scroll, 1500)
         }, 
         methods: {
-            scroll() {
-                let that = this;
-                that.oneClass = false;
-                that.animate = !that.animate;
+            scroll () {
+                let that = this
+                that.oneClass = false
+                that.animate = !that.animate
                 setTimeout(function () {
-                    that.List.push(that.List[0]);
-                    that.List.shift();
-                    that.oneClass = true;
-                    that.animate = !that.animate; // 这个地方如果不把animate 取反会出现消息回滚的现象，此时把ul 元素的过渡属性取消掉就可以完美实现无缝滚动的效果了
+                    that.List.push(that.List[0])
+                    that.List.shift()
+                    that.oneClass = true
+                    that.animate = !that.animate // 这个地方如果不把animate 取反会出现消息回滚的现象，此时把ul 元素的过渡属性取消掉就可以完美实现无缝滚动的效果了
                 }, 500)
             },
-            mEnter() {
+            mEnter () {
                 // clearInterval(this.timer)
             },
-            mLeave() {
+            mLeave () {
                 // this.timer = setInterval(this.scroll, 3000) 
             },
-			clickListTwo(item) {
-				this.$emit('clickListTwo',item)
+			clickListTwo (item) {
+				this.$emit('clickListTwo', item)
 			}
         },
-        beforeDestroy() {
-            if (this.timer) {clearInterval(this.timer);}
+        beforeDestroy () {
+            if (this.timer) {clearInterval(this.timer)}
         },
     }
 </script>
 
 <style scoped>
     #box{
-        height: 120px;
-        line-height: 30px;
+        height: 240rpx;
+        line-height: 60rpx;
         overflow: hidden;
         transition: all 0.5s;
         color: #ffffff;
@@ -75,8 +75,8 @@
     }
     #con1 li{
         list-style: none;
-        line-height: 30px;
-        height: 30px;
+        line-height: 60rpx;
+        height: 60rpx;
     }
 	.mg{
 		display: inline-block;
@@ -96,9 +96,9 @@
 		/* margin-right: 1rpx; */
 	}
 	.m-margin-0{
-		margin-top: 0px;
+		margin-top: 0rpx;
 	}
 	.m-margin-30{
-		margin-top: -30px;
+		margin-top: -60rpx;
 	}
 </style>

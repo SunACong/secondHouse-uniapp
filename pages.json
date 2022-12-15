@@ -137,7 +137,8 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#f1f1f1",
 		"backgroundColor": "#F8F8F8",
-		"onReachBottomDistance": 300
+		"onReachBottomDistance": 300,
+		"rpxCalcMaxDeviceWidth": 2146
 	},
 	"tabBar": {
 		"color": "#C8C9CC",
@@ -169,7 +170,8 @@
 			"text": "财务"
 		}, {
 			"pagePath": "pages/user/user",
-			"iconPath": "http://47.111.85.236:8099/common/gerenzhongxin.png",
+			"iconPath": "static/common/gerenzhongxin.png",
+			"selectedIconPath": "static/common/gerenzhongxin.png",
 			"text": "个人中心"
 		} ]
 	}

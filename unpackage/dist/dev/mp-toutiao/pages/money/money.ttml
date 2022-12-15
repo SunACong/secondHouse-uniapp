@@ -1,1 +1,0 @@
-<view><uni-combox vue-id="2d07b0c6-1" border="{{true}}" candidates="{{candidates}}" placeholder="请选择所在城市" bind:__l="__l"></uni-combox><view>{{''+$root.f0+''}}</view><view>{{''+$root.g0+''}}</view></view>

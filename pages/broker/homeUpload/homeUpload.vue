@@ -8,7 +8,8 @@
 			<view class="u-page__line-item margin-top">
 				<u-line color="#d2e1ea"></u-line>
 			</view>
-
+			
+			<!-- 图片上传 -->
 			<view class="flex">
 				<u-upload :style="fileList.length!=0? 'margin-left: 70rpx;':'margin-left: 250rpx;'" :fileList="fileList"
 					@afterRead="afterRead" @delete="deletePic" multiple :maxCount="9">
@@ -16,7 +17,7 @@
 						style="width: 170rpx;height: 170rpx;"></image>
 				</u-upload>
 			</view>
-			<!-- 			<u-button style="width: 200rpx;" type="primary" @click="upload()">上传</u-button> -->
+			
 			<!-- 中间表单 -->
 			<view>
 				<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
@@ -168,8 +169,7 @@
 							border="none" placeholder="请输入需求"></u--input>
 					</u-form-item>
 
-					<u-form-item label="附属设施: " prop="facility" ref="item1">
-					</u-form-item>
+					<u-form-item label="附属设施: " prop="facility" ref="item1"/>
 				</u--form>
 
 				<view class="flex flex-wrap">
@@ -308,16 +308,6 @@
 							trigger: [ 'change', 'blur' ]
 						},
 					],
-					// nameOne: [ { type: 'string', required: true, message: '请填写房东1姓名', trigger: [ 'change', 'blur' ] } ], // 房东2姓名
-					// phoneNumber: [ { type: 'string', required: true, message: '请填写电话号码', trigger: [ 'change', 'blur' ] },
-					// 	{
-					// 		validator: ( rule, value, callback ) => {
-					// 			return uni.$u.test.mobile( value )
-					// 		},
-					// 		message: '请输入正确的手机号',
-					// 		trigger: [ 'change', 'blur' ]
-					// 	},
-					// ],
 					homeName: [ { type: 'string', required: true, message: '未填', trigger: [ 'change', 'blur' ] } ], // 小区名称
 					region: [ { type: 'string', required: true, message: '未填', trigger: [ 'change', 'blur' ] } ], // 区域
 					build: [ { type: 'string', required: true, message: '*', trigger: [ 'change', 'blur' ] } ], // 栋座

@@ -1,7 +1,8 @@
  <template>
 	<view class="" style="background-color: #FFFFFF;">
-		<u-icon width="750rpx" height="84rpx" style="padding-top: 81rpx;" :name="this.GLOBLE.imgURL+'/broker/renwudating.png'">
-		</u-icon>
+		<u-icon width="750rpx" height="84rpx" style="padding-top: 81rpx;" :name="this.GLOBLE.imgURL+'/broker/renwudating.png'"/>
+		
+		<!-- 客源 -->
 		<view class="m-relative">
 			<u-icon class="m-absolute::after " width="750rpx" height="450rpx" :name="this.GLOBLE.imgURL+'/broker/kehugongpan.png'">
 			</u-icon>
@@ -10,9 +11,10 @@
 			</view>
 		</view>
 
-
-		<u-icon width="600rpx" height="220rpx" style="margin-left: 80rpx;" :name="this.GLOBLE.imgURL+'/broker/vs.png'"></u-icon>
-
+		<!-- VS -->
+		<u-icon width="600rpx" height="220rpx" style="margin-left: 80rpx;" :name="this.GLOBLE.imgURL+'/broker/vs.png'"/>
+		
+		<!-- 房源 -->
 		<view class="m-relative">
 			<u-icon class="m-absolute::after " width="750rpx" height="470rpx" style="margin-top: -63rpx;"
 				:name="this.GLOBLE.imgURL+'/broker/fangyuan.png'"></u-icon>
@@ -20,8 +22,11 @@
 				<animateList4 :List="homeList" @clickListTwo="toWatchHome"></animateList4>
 			</view>
 		</view> 
+		
+		<!-- 工作区 -->
 		<u-icon width="750rpx" height="80rpx" :name="this.GLOBLE.imgURL+'/broker/gongzuoqu.png'"></u-icon>
 
+		<!-- 我的成果 -->
 		<view class="chengguo m-relative">
 			<u-icon class="m-absolute" width="690rpx" height="372rpx" style="top: 39rpx;left: 40rpx;"
 				:name="this.GLOBLE.imgURL+'/broker/wodechengguo.png'"></u-icon>
@@ -46,7 +51,10 @@
 				<text>1888元</text>
 			</view>
 		</view>
-		<u-icon width="670rpx" height="180rpx" style="margin-left: 40rpx;margin-top: 20rpx;" :name="this.GLOBLE.imgURL+'/broker/OA.png'"></u-icon>
+		
+		<!-- OA办公流 -->
+		<u-icon width="670rpx" height="180rpx" style="margin-left: 40rpx;margin-top: 20rpx;" :name="this.GLOBLE.imgURL+'/broker/OA.png'"/>
+		
 		<!-- 通知    公告 -->
 		<view class="u-demo-block margin-left margin-right ">
 			<view class="u-demo-block__content">
@@ -54,7 +62,7 @@
 			</view>
 		</view>
 
-		<!-- 通知    公告 -->
+		<!-- 底部板块 -->
 		<view class="bg-white solid-bottom solid-top">
 			<view class="grid text-center col-2">
 				<view class=" flex solid-right solid-bottom align-center padding-top padding-bottom" @click="toHomeUpload(index1)" v-for="(item,index1) in oneList" :key="index1">
@@ -66,7 +74,9 @@
 				</view>
 			</view>
 		</view>
+		
 		<view class="bg-gray" style="height: 20rpx;" />
+		
 		<view class="bg-white solid-bottom solid-top">
 			<view class="grid text-center col-2">
 				<view class="flex solid-right solid-bottom align-center padding-top padding-bottom" @click="toJiaojiedan(index2)" v-for="(item,index2) in twoList" :key="index2">
@@ -78,7 +88,9 @@
 				</view>
 			</view>
 		</view>
+		
 		<view class="bg-gray" style="height: 20rpx;" />
+		
 		<view class="bg-white solid-bottom solid-top">
 			<view class="grid  col-2">
 				<view class="flex solid-right solid-bottom align-center padding-top padding-bottom"
@@ -91,7 +103,8 @@
 				</view>
 			</view>
 		</view>
-		<view class="bg-white" style="height: 50rpx;"></view>
+		
+		<view class="bg-white" style="height: 50rpx;" />
 	</view>
 </template>
 
@@ -220,10 +233,9 @@
 			
 			// 获取展示数据
 			async getList () {
-				// let customerInfo = await uni.$u.api.customer.getCustomer({ params: { gongSiPan: '公盘', firmId: this.vuex_userInfo.dept.parentId } })
-				// 查询本地区公盘客户
 				let customerInfo = await uni.$u.api.customer.getOwnCustomer({ params: { gongSiPan: '公盘', firmId: this.vuex_userInfo.dept.parentId } })
 				this.customerList = customerInfo.rows
+				console.log('${11}', 'this.customerList : ', this.customerList )
 				// 查询本地区房源
 				let homeInfo = await uni.$u.api.home.getOwnHome({ params: { companyId: this.vuex_userInfo.dept.parentId } })
 				this.homeList = homeInfo.rows
@@ -233,6 +245,7 @@
 				// 查询个人房源
 				let ownHomeInfo = await uni.$u.api.home.getOwnHome({ params: { userId: this.vuex_userInfo.userId } })
 				this.result_home = ownHomeInfo.total
+				
 			}
 		}
 	}
